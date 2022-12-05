@@ -74,6 +74,6 @@ for i in inputArray:
         elfNum += 1
         elfCal = 0
 
-print(elfTotes)
-print(moochTarget)
-print(moochTargetCal)
+print("Top Three Calorie Carriers:",moochTarget)
+print("Top Three Calorie Carrier Calories:",moochTargetCal)
+print("Sum of Top Three Calorie Carriers:",sum(moochTargetCal))

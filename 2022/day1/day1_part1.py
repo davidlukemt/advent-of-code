@@ -37,6 +37,5 @@ for i in inputArray:
     
 
 # Print the mooch target and how many calories they're carrying
-print(elfTotes)
 print("The Elf to mooch from is:", moochTarget+1)
 print("They're carrying",moochTargetCal,"calories!")
