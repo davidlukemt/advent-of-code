@@ -2,7 +2,7 @@ def myLen(e):
     return len(e)
 
 # Read in assignment input and store in string
-with open('day3_example') as f:
+with open('day3_input') as f:
     contents = f.read()
 
 # Split input lines into array
