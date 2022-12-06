@@ -19,10 +19,12 @@ while (groupCounter * 3) <= len(inputArray):
     groupCounter += 1
     groups.append([inputArray[groupEnd-3],inputArray[groupEnd-2],inputArray[groupEnd-1]])
 
+# Itterate through groups, sort them by length
 for group in groups:
     group.sort(key=myLen)
     match = ''
 
+# Itterate through the shortest group member to find a common character in the group
     for i in group[0]:
         positionOne = group[1].find(i)
         if positionOne != -1:
@@ -30,6 +32,10 @@ for group in groups:
             if positionTwo != -1:
                 match = group[2][positionTwo]
 
+# After identifing the common character, determine it's priority value based on the priority string above 
+# the characters priority is its position in the priority string starting with a in position 1
+# Add all of the priorites together
     prioritySum += priority.find(match)+1
 
+# Return the sum of all groups priorities
 print(prioritySum)
