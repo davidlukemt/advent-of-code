@@ -1,6 +1,3 @@
-def myLen(e):
-    return len(e)
-
 # Read in assignment input and store in string
 with open('day4_input') as f:
     contents = f.read()
