@@ -16,11 +16,15 @@ for pair in inputArray:
     pairSplit = pair.split(',')
     first = pairSplit[0].split('-')
     second = pairSplit[1].split('-')
-    if first[0] <= second[0]:
-        if first[1] >= second[1]:
+    
+    # Check if second of the pair is contained within the first
+    if int(first[0]) <= int(second[0]):
+        if int(first[1]) >= int(second[1]):
             fullyContains += 1
-    elif second[0] <= first[0]:
-        if second[1] >= first[1]:
+    
+    # Check if first of the pair is contained within the second
+    if int(second[0]) <= int(first[0]):
+        if int(second[1]) >= int(first[1]):
             fullyContains += 1
 
 # Return number of fully contained assignments
