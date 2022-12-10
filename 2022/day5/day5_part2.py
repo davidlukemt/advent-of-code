@@ -45,8 +45,6 @@ while x >= 0:
     x = x - 1
     z += 1
 
-print(easierStacks)
-
 # Process moves on new list of lists
 for i in moves:
     line = i.split(' ')
@@ -55,13 +53,9 @@ for i in moves:
     moveTo = int(line[5])-1
     moving = []
     moving = easierStacks[moveFrom][-toMove:]
-    print()
-    print(moving)
     easierStacks[moveFrom] = easierStacks[moveFrom][0:(len(easierStacks[moveFrom])-toMove)]
     easierStacks[moveTo] += moving
-    print(easierStacks)
     
-
 # Create output from top container in each stack and print it
 output = ''
 for top in easierStacks:
