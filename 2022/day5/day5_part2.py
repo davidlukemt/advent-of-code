@@ -1,5 +1,5 @@
 # Read in assignment input and store in string
-with open('day5_example') as f:
+with open('day5_input') as f:
     contents = f.read()
 
 # Split input lines into array
