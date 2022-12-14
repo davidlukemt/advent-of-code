@@ -1,7 +1,7 @@
 from collections import Counter
 
 # Read in assignment input and store in string
-with open('day6_example') as f:
+with open('day6_input') as f:
     contents = f.read()
 
 # Split input lines into array
