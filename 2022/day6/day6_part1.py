@@ -7,21 +7,29 @@ with open('day6_example') as f:
 # Split input lines into array
 inputArray = contents.splitlines()
 
+# Itterate through input file lines
 for item in inputArray:
-    print(item)
-    
     i = 0
-    print(item[i:i+4])
-    keepGoing = True
-    while i+4 < len(item):
-        fourChar = item[i:i+3]
-        
-        print(fourChar)
-        
-        for letter in fourChar:
-            if fourChar.find(letter) != -1:
-                keepGoing = False
-            else:
-                i += 1
+    markerFound = False
 
-    print(i+4)
+    # Itterate through line looking at 4 character segments
+    while i+4 < len(item) and not markerFound:
+        fourChar = item[i:i+4]
+        keepGoing = True
+        charIndex = 0
+        
+        # Check the four character segment for duplicate characters, if none found return that segment as the marker
+        while keepGoing:
+            char = fourChar[charIndex]
+            if fourChar.count(char) != 1:
+                keepGoing = False
+            elif charIndex == 3:
+                keepGoing = False
+                markerFound = True
+                print(fourChar)
+            else:
+                charIndex += 1
+        if markerFound != True:
+            i += 1
+
+    print("Marker in", item, "located at",i+4)
